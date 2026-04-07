@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termine & Anmeldung | Bertram Böhm — Aufstellungsseminare 2026 in Eching</title>
+  <meta name="description" content="Aufstellungsseminar Termine 2026 in Eching bei Freising (nahe München). Familien- und Systemaufstellungen mit Bertram Böhm. Jetzt Platz sichern.">
+  <meta name="keywords" content="Aufstellungsseminar, Termine 2026, Eching, München, Familienaufstellung, Systemaufstellung, Seminar, Anmeldung, Bertram Böhm">
+  <meta name="author" content="Bertram Böhm">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.bertramboehm.de/termine.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Termine & Anmeldung 2026 | Bertram Böhm — Aufstellungsseminare">
+  <meta property="og:description" content="Aufstellungsseminar Termine 2026 in Eching bei Freising. Familien- und Systemaufstellungen mit Bertram Böhm. Jetzt Platz sichern.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Termine page — past items */
+    .termin-item--past {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .termin-item--past .termin-item__date {
+      background: var(--color-text-light);
+    }
+    .termin-item--past .termin-item__badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-light);
+      background: var(--color-background-alt);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-top: 0.25rem;
+    }
+
+    /* Termine page — highlighted next item */
+    .termin-item--next {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 2px rgba(91, 138, 138, 0.15);
+      position: relative;
+    }
+    .termin-item--next::before {
+      content: 'Nächster Termin';
+      position: absolute;
+      top: -12px;
+      left: 24px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      padding: 0.15rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* Form extras */
+    .form-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: var(--space-md);
+    }
+    .form-checkbox input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+      accent-color: var(--color-primary);
+    }
+    .form-checkbox label {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--color-text);
+      cursor: pointer;
+    }
+    .form-checkbox label a {
+      text-decoration: underline;
+    }
+
+    /* Location grid */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+      align-items: start;
+    }
+    .location-details h3 {
+      margin-bottom: var(--space-sm);
+    }
+    .location-details p {
+      color: var(--color-text-light);
+    }
+    .location-details strong {
+      color: var(--color-accent-dark);
+    }
+
+    /* Conditions list */
+    .conditions-list {
+      list-style: none;
+      max-width: var(--max-width-narrow);
+    }
+    .conditions-list li {
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      color: var(--color-text);
+    }
+    .conditions-list li::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.6rem;
+    }
+
+    @media (max-width: 768px) {
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Bertram Böhm — Startseite">
+        <svg class="nav__logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" stroke="#5B8A8A" stroke-width="1.5" opacity="0.3"/>
+          <circle cx="20" cy="20" r="13" stroke="#5B8A8A" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="20" cy="20" r="8" stroke="#5B8A8A" stroke-width="2" opacity="0.8"/>
+          <circle cx="20" cy="20" r="3" fill="#5B8A8A"/>
+        </svg>
+        <div class="nav__logo-text">
+          Bertram Böhm
+          <span>Systemische Aufstellungsarbeit</span>
+        </div>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="familienaufstellung.html">Familienaufstellung</a></li>
+        <li><a href="organisationsaufstellung.html">Organisationsaufstellung</a></li>
+        <li><a href="methode.html">Die Methode</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="termine.html" class="nav__cta active">Termine</a></li>
+      </ul>
+
+      <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <nav class="page-header__breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Startseite</a> &gt; Termine & Anmeldung
+      </nav>
+      <h1>Termine & Anmeldung</h1>
+      <p>Seminartermine 2026 — Aufstellungsseminare in Eching bei Freising</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- ========== Seminartermine 2026 ========== -->
+    <section class="section" id="termine">
+      <div class="container">
+        <h2 class="text-center mb-lg">Seminartermine 2026</h2>
+        <div class="termin-list">
+
+          <!-- 1/26 — VERGANGEN -->
+          <div class="termin-item termin-item--past">
+            <div class="termin-item__date">
+              <span class="termin-item__day">14</span>
+              <span class="termin-item__month">Feb. 2026</span>
+            </div>
+            <div class="termin-item__info">
+              <p class="termin-item__title">Aufstellungsseminar 1/26</p>
+              <p class="termin-item__detail">10:00–17:00 Uhr | ASZ Eching</p>
+              <span class="termin-item__badge">Vergangen</span>
+            </div>
+          </div>
+
+          <!-- 2/26 — VERGANGEN -->
+          <div class="termin-item termin-item--past">
+            <div class="termin-item__date">
+              <span class="termin-item__day">19</span>
+              <span class="termin-item__month">Apr. 2026</span>
+            </div>
+            <div class="termin-item__info">
+              <p class="termin-item__title">Aufstellungsseminar 2/26</p>
+              <p class="termin-item__detail">10:00–17:00 Uhr | ASZ Eching</p>
+              <span class="termin-item__badge">Vergangen</span>
+            </div>
+          </div>
+
+          <!-- 3/26 — NEXT upcoming, highlighted -->
+          <div class="termin-item termin-item--next">
+            <div class="termin-item__date">
+              <span class="termin-item__day">20</span>
+              <span class="termin-item__month">Juni 2026</span>
+            </div>
+            <div class="termin-item__info">
+              <p class="termin-item__title">Aufstellungsseminar 3/26</p>
+              <p class="termin-item__detail">10:00–17:00 Uhr | ASZ Eching</p>
+            </div>
+            <div class="termin-item__cta">
+              <a href="#anmeldung" class="btn btn--primary">Anmelden</a>
+            </div>
+          </div>
+
+          <!-- 4/26 -->
+          <div class="termin-item">
+            <div class="termin-item__date">
+              <span class="termin-item__day">29</span>
+              <span class="termin-item__month">Aug. 2026</span>
+            </div>
+            <div class="termin-item__info">
+              <p class="termin-item__title">Aufstellungsseminar 4/26</p>
+              <p class="termin-item__detail">10:00–17:00 Uhr | ASZ Eching</p>
+            </div>
+            <div class="termin-item__cta">
+              <a href="#anmeldung" class="btn btn--primary">Anmelden</a>
+            </div>
+          </div>
+
+          <!-- 5/26 -->
+          <div class="termin-item">
+            <div class="termin-item__date">
+              <span class="termin-item__day">26</span>
+              <span class="termin-item__month">Sep. 2026</span>
+            </div>
+            <div class="termin-item__info">
+              <p class="termin-item__title">Aufstellungsseminar 5/26</p>
+              <p class="termin-item__detail">10:00–17:00 Uhr | ASZ Eching</p>
+            </div>
+            <div class="termin-item__cta">
+              <a href="#anmeldung" class="btn btn--primary">Anmelden</a>
+            </div>
+          </div>
+
+          <!-- 6/26 -->
+          <div class="termin-item">
+            <div class="termin-item__date">
+              <span class="termin-item__day">24</span>
+              <span class="termin-item__month">Okt. 2026</span>
+            </div>
+            <div class="termin-item__info">
+              <p class="termin-item__title">Aufstellungsseminar 6/26</p>
+              <p class="termin-item__detail">10:00–17:00 Uhr | ASZ Eching</p>
+            </div>
+            <div class="termin-item__cta">
+              <a href="#anmeldung" class="btn btn--primary">Anmelden</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Preise ========== -->
+    <section class="section section--alt" id="preise">
+      <div class="container">
+        <h2 class="text-center mb-lg">Preise</h2>
+        <div class="pricing-grid">
+
+          <!-- Teilnahme ohne eigene Aufstellung -->
+          <div class="pricing-card">
+            <h3 class="pricing-card__title">Teilnahme ohne eigene Aufstellung</h3>
+            <p class="pricing-card__price">50 &euro;</p>
+            <p class="pricing-card__desc">Beobachten und als Stellvertreter mitwirken. Ideal zum Kennenlernen.</p>
+            <ul class="pricing-card__features">
+              <li>Erleben Sie die Kraft einer Aufstellung</li>
+              <li>Wirken Sie als Stellvertreter mit</li>
+              <li>Gewinnen Sie eigene Erkenntnisse</li>
+            </ul>
+            <a href="#anmeldung" class="btn btn--secondary" style="width: 100%; justify-content: center;">Anmelden</a>
+          </div>
+
+          <!-- Eigene Aufstellung (featured) -->
+          <div class="pricing-card pricing-card--featured">
+            <h3 class="pricing-card__title">Eigene Aufstellung</h3>
+            <p class="pricing-card__price">250 &euro;</p>
+            <p class="pricing-card__desc">Stellen Sie Ihr eigenes Anliegen auf.</p>
+            <ul class="pricing-card__features">
+              <li>Persönliches Vorgespräch</li>
+              <li>Eigene Aufstellung mit Stellvertretern</li>
+              <li>Lösungsbild und Integration</li>
+              <li>Nachgespräch</li>
+            </ul>
+            <a href="#anmeldung" class="btn btn--primary" style="width: 100%; justify-content: center;">Jetzt anmelden</a>
+          </div>
+
+          <!-- VIP-Aufstellung -->
+          <div class="pricing-card">
+            <h3 class="pricing-card__title">VIP-Aufstellung</h3>
+            <p class="pricing-card__price">Auf Anfrage</p>
+            <p class="pricing-card__desc">Höchste Diskretion. Anonym, nur Stellvertreter.</p>
+            <ul class="pricing-card__features">
+              <li>Vollständige Anonymität</li>
+              <li>Individueller Termin möglich</li>
+              <li>Persönliche Betreuung</li>
+            </ul>
+            <a href="#anmeldung" class="btn btn--secondary" style="width: 100%; justify-content: center;">Anfragen</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Anmeldeformular ========== -->
+    <section class="section" id="anmeldung">
+      <div class="container container--narrow">
+        <h2 class="text-center mb-lg">Anmeldung</h2>
+        <form action="https://formspree.io/f/XXXXXXXX" method="POST">
+
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Ihr vollständiger Name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" name="email" required placeholder="Ihre E-Mail-Adresse">
+          </div>
+
+          <div class="form-group">
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="Für Rückfragen (optional)">
+          </div>
+
+          <div class="form-group">
+            <label for="termin">Gewünschter Termin *</label>
+            <select id="termin" name="termin" required>
+              <option value="" disabled selected>Bitte wählen Sie einen Termin</option>
+              <option value="2026-06-20">20. Juni 2026 — Aufstellungsseminar 3/26</option>
+              <option value="2026-08-29">29. August 2026 — Aufstellungsseminar 4/26</option>
+              <option value="2026-09-26">26. September 2026 — Aufstellungsseminar 5/26</option>
+              <option value="2026-10-24">24. Oktober 2026 — Aufstellungsseminar 6/26</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="teilnahme">Teilnahmeform *</label>
+            <select id="teilnahme" name="teilnahme" required>
+              <option value="" disabled selected>Bitte wählen Sie eine Teilnahmeform</option>
+              <option value="ohne-aufstellung">Ohne eigene Aufstellung (50 &euro;)</option>
+              <option value="eigene-aufstellung">Eigene Aufstellung (250 &euro;)</option>
+              <option value="vip-aufstellung">VIP-Aufstellung (auf Anfrage)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="nachricht" placeholder="Haben Sie Fragen oder möchten Sie etwas mitteilen? (optional)"></textarea>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="datenschutz" name="datenschutz" required>
+            <label for="datenschutz">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *</label>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">Verbindlich anmelden</button>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== Seminarort & Anfahrt ========== -->
+    <section class="section section--alt" id="anfahrt">
+      <div class="container">
+        <h2 class="text-center mb-lg">Seminarort & Anfahrt</h2>
+        <div class="location-grid">
+
+          <div class="location-details">
+            <h3>Veranstaltungsort</h3>
+            <p><strong>Alten-Service-Zentrum (ASZ)</strong><br>
+            Bahnhofstraße 4<br>
+            85386 Eching</p>
+
+            <p class="mt-md"><strong>Uhrzeit:</strong> 10:00–17:00 Uhr</p>
+
+            <h3 class="mt-lg">Anfahrt</h3>
+            <p><strong>Mit der S-Bahn:</strong><br>
+            S1 Richtung Freising, Haltestelle Eching. Von dort ca. 5 Minuten zu Fuß.</p>
+            <p><strong>Mit dem Auto:</strong><br>
+            A9 München–Nürnberg, Ausfahrt Eching. Parkplätze stehen am Veranstaltungsort zur Verfügung.</p>
+          </div>
+
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.5!2d11.617!3d48.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e73c5e2e5e5e5%3A0x0!2sBahnhofstra%C3%9Fe%204%2C%2085386%20Eching!5e0!3m2!1sde!2sde!4v1700000000000!5m2!1sde!2sde"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Karte: ASZ Eching, Bahnhofstraße 4, 85386 Eching">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Teilnahmebedingungen ========== -->
+    <section class="section" id="bedingungen">
+      <div class="container">
+        <h2 class="text-center mb-lg">Teilnahmebedingungen</h2>
+        <ul class="conditions-list" style="margin: 0 auto;">
+          <li>Die Anmeldung ist verbindlich und erfolgt per Formular oder telefonisch.</li>
+          <li>Die Bezahlung erfolgt vor Ort in bar oder nach Rechnungsstellung.</li>
+          <li>Eine Stornierung ist bis 7 Tage vor dem Seminar kostenfrei möglich.</li>
+          <li>Bei kurzfristiger Absage kann ein Ersatzteilnehmer benannt werden.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Fragen zur Anmeldung?</h2>
+          <p>Rufen Sie mich an oder schreiben Sie mir — ich berate Sie gerne persönlich zu den Seminaren und zur passenden Teilnahmeform.</p>
+          <a href="tel:+498161234567" class="btn btn--white">Jetzt anrufen</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" aria-label="Bertram Böhm — Startseite">
+            <svg class="nav__logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="20" cy="20" r="18" stroke="#7BA3A3" stroke-width="1.5" opacity="0.3"/>
+              <circle cx="20" cy="20" r="13" stroke="#7BA3A3" stroke-width="1.5" opacity="0.5"/>
+              <circle cx="20" cy="20" r="8" stroke="#7BA3A3" stroke-width="2" opacity="0.8"/>
+              <circle cx="20" cy="20" r="3" fill="#7BA3A3"/>
+            </svg>
+            <div class="nav__logo-text" style="color: rgba(255,255,255,0.9);">
+              Bertram Böhm
+              <span style="color: rgba(255,255,255,0.6);">Systemische Aufstellungsarbeit</span>
+            </div>
+          </a>
+          <p>Systemische Familien- und Organisationsaufstellungen in Eching bei Freising. Seit über 25 Jahren begleite ich Menschen auf dem Weg zu Klarheit und Ordnung.</p>
+        </div>
+
+        <!-- Aufstellungen -->
+        <div>
+          <h4 class="footer__heading">Aufstellungen</h4>
+          <ul class="footer__links">
+            <li><a href="familienaufstellung.html">Familienaufstellung</a></li>
+            <li><a href="organisationsaufstellung.html">Organisationsaufstellung</a></li>
+            <li><a href="methode.html">Die Methode</a></li>
+            <li><a href="termine.html">Termine</a></li>
+          </ul>
+        </div>
+
+        <!-- Über -->
+        <div>
+          <h4 class="footer__heading">Über</h4>
+          <ul class="footer__links">
+            <li><a href="ueber-mich.html">Über Bertram Böhm</a></li>
+            <li><a href="termine.html">Nächste Seminare</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontakt -->
+        <div>
+          <h4 class="footer__heading">Kontakt</h4>
+          <div class="footer__contact-info">
+            <a href="tel:+498161234567">08161 / 23 45 67</a>
+            <a href="mailto:info@bertramboehm.de">info@bertramboehm.de</a>
+            <p style="margin-top: 0.5rem;">Eching bei Freising<br>Bayern, Deutschland</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+        <p>&copy; 2026 Bertram Böhm. Alle Rechte vorbehalten.</p>
+        <div class="footer__legal">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
