@@ -550,6 +550,13 @@ body.nav-open {
   font-style: italic;
 }
 
+.intro-block__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .intro-block__content h2 {
   margin-bottom: var(--space-sm);
 }
