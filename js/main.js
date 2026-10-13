@@ -126,6 +126,34 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
+  // --- Google Maps erst nach Klick laden (Zwei-Klick-Lösung, DSGVO) ---
+  document.querySelectorAll('iframe[data-src*="google.com/maps"]').forEach(frame => {
+    const box = document.createElement('div');
+    box.className = 'map-consent';
+    box.style.cssText = 'position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;padding:1.5rem;text-align:center;background:var(--color-background-alt,#f4f1ec);color:var(--color-text);';
+    const text = document.createElement('p');
+    text.style.cssText = 'margin:0;max-width:30rem;font-size:0.9rem;';
+    text.textContent = 'Beim Laden der Karte werden Daten (u. a. Ihre IP-Adresse) an Google übertragen.';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'btn btn--secondary';
+    btn.textContent = 'Karte laden';
+    const link = document.createElement('a');
+    link.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Bahnhofstraße 4, 85386 Eching');
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = 'In Google Maps öffnen';
+    link.style.fontSize = '0.85rem';
+    btn.addEventListener('click', () => {
+      frame.src = frame.dataset.src;
+      box.remove();
+    });
+    box.append(text, btn, link);
+    const parent = frame.parentElement;
+    if (getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
+    parent.appendChild(box);
+  });
+
   // --- Formspree AJAX submission (no redirect, inline status) ---
   document.querySelectorAll('form[action*="formspree.io"]').forEach(form => {
     const status = document.createElement('div');
@@ -150,10 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (res.ok) {
-          if (window.bbTrackLead) {
-            const termin = form.querySelector('select[name]');
-            window.bbTrackLead({ content_name: termin ? termin.value : 'kontakt' });
-          }
+          if (window.bbTrackLead) window.bbTrackLead();
           form.reset();
           status.className = 'form-status form-status--success';
           status.textContent = 'Vielen Dank! Ihre Nachricht wurde gesendet. Ich melde mich so bald wie möglich bei Ihnen.';
