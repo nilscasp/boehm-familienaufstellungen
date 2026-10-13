@@ -28,8 +28,7 @@
   <style>
     /* Termine page — past items */
     .termin-item--past {
-      opacity: 0.5;
-      pointer-events: none;
+      display: none;
     }
     .termin-item--past .termin-item__date {
       background: var(--color-text-light);
@@ -64,6 +63,47 @@
       border-radius: 20px;
       font-size: 0.75rem;
       font-weight: 600;
+    }
+
+    /* Naechster Termin direkt im Seitenkopf */
+    .next-box {
+      margin-top: var(--space-md);
+      background: var(--color-white);
+      border: 2px solid var(--color-primary);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      max-width: 640px;
+    }
+    .next-box__label {
+      display: inline-block;
+      background: var(--color-primary);
+      color: var(--color-white);
+      padding: 0.15rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+    .next-box__date {
+      font-family: 'Lora', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--color-accent-dark);
+      margin: 0 0 0.35rem;
+    }
+    .next-box p { margin: 0 0 0.35rem; color: var(--color-text); }
+    .next-box__prices { font-size: 0.95rem; }
+    .next-box__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.9rem;
+    }
+    .next-box__actions .btn { justify-content: center; }
+    .next-box__hint { font-size: 0.85rem; color: var(--color-text-light) !important; margin-top: 0.6rem !important; }
+    @media (max-width: 480px) {
+      .next-box { padding: 1rem 1.1rem; }
+      .next-box__actions .btn { flex: 1 1 100%; }
     }
 
     /* Form extras */
@@ -180,7 +220,17 @@
         <a href="index.html">Startseite</a> &gt; Termine & Anmeldung
       </nav>
       <h1>Termine & Anmeldung</h1>
-      <p>Seminartermine 2026/2027 — Aufstellungsseminare in Eching bei Freising</p>
+      <div class="next-box">
+        <span class="next-box__label">Nächster Aufstellungstag</span>
+        <p class="next-box__date">Samstag, 24. Oktober 2026 · 10–17 Uhr</p>
+        <p>ASZ Eching, Bahnhofstraße 4 · ca. 5 Minuten von der S1</p>
+        <p class="next-box__prices">Teilnahme ohne eigene Aufstellung <strong>50 &euro;</strong> · mit eigener Aufstellung <strong>250 &euro;</strong></p>
+        <div class="next-box__actions">
+          <a href="#anmeldung" class="btn btn--primary">Jetzt anmelden</a>
+          <a href="tel:+498932714713" class="btn btn--secondary">Anrufen: 089 / 32 71 47 13</a>
+        </div>
+        <p class="next-box__hint">Der letzte Termin in diesem Jahr. Der nächste Aufstellungstag ist am 13. Februar 2027.</p>
+      </div>
     </div>
   </header>
 
@@ -451,7 +501,7 @@
             <label for="termin">Gewünschter Termin *</label>
             <select id="termin" name="termin" required>
               <option value="" disabled selected>Bitte wählen Sie einen Termin</option>
-              <option value="2026-10-24">24. Oktober 2026 — Aufstellungsseminar 6/26</option>
+              <option value="2026-10-24" selected>24. Oktober 2026 — Aufstellungsseminar 6/26</option>
               <option value="2027-02-13">13. Februar 2027 — Aufstellungsseminar 1/27</option>
               <option value="2027-04-10">10. April 2027 — Aufstellungsseminar 2/27</option>
               <option value="2027-06-12">12. Juni 2027 — Aufstellungsseminar 3/27</option>
