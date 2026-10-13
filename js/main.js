@@ -150,6 +150,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (res.ok) {
+          if (window.bbTrackLead) {
+            const termin = form.querySelector('select[name]');
+            window.bbTrackLead({ content_name: termin ? termin.value : 'kontakt' });
+          }
           form.reset();
           status.className = 'form-status form-status--success';
           status.textContent = 'Vielen Dank! Ihre Nachricht wurde gesendet. Ich melde mich so bald wie möglich bei Ihnen.';
