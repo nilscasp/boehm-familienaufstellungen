@@ -89,6 +89,7 @@
       margin: 0 0 0.35rem;
     }
     .next-box p { margin: 0 0 0.35rem; color: var(--color-text); }
+    .next-box__intro { font-size: 1.1rem; margin-top: 0.6rem !important; color: var(--color-accent-dark) !important; }
     .next-box__prices { font-size: 0.95rem; }
     .next-box__actions {
       display: flex;
@@ -221,7 +222,8 @@
         <span class="next-box__label">Nächster Aufstellungstag</span>
         <p class="next-box__date">Samstag, 24. Oktober 2026 · 10–17 Uhr</p>
         <p>ASZ Eching, Bahnhofstraße 4 · ca.&nbsp;5&nbsp;Minuten von der S1</p>
-        <p class="next-box__prices">Teilnahme ohne eigene Aufstellung <strong>50&nbsp;&euro;</strong> · mit eigener Aufstellung <strong>250&nbsp;&euro;</strong></p>
+        <p class="next-box__intro"><strong>Zum Kennenlernen: einfach dabei sein und miterleben &ndash; 50&nbsp;&euro;</strong></p>
+        <p class="next-box__prices">Ohne eigenes Anliegen, als Teilnehmer:in oder Stellvertreter:in. Wer selbst aufstellen möchte: 250&nbsp;&euro; inkl. Vor- und Nachgespräch.</p>
         <div class="next-box__actions">
           <a href="#anmeldung" class="btn btn--primary">Jetzt anmelden</a>
           <a href="tel:+498932714713" class="btn btn--secondary">Anrufen: 089 / 32 71 47 13</a>
@@ -458,31 +460,9 @@
           <input type="hidden" name="_subject" value="Seminaranmeldung – boehm-familienaufstellungen.de">
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="vorname">Vorname *</label>
-              <input type="text" id="vorname" name="vorname" required autocomplete="given-name" placeholder="Ihr Vorname">
-            </div>
-            <div class="form-group">
-              <label for="nachname">Nachname *</label>
-              <input type="text" id="nachname" name="nachname" required autocomplete="family-name" placeholder="Ihr Nachname">
-            </div>
-          </div>
-
           <div class="form-group">
-            <label for="strasse">Straße und Hausnummer *</label>
-            <input type="text" id="strasse" name="strasse" required autocomplete="street-address" placeholder="z. B. Musterstraße 12">
-          </div>
-
-          <div class="form-row form-row--plz">
-            <div class="form-group">
-              <label for="plz">PLZ *</label>
-              <input type="text" id="plz" name="plz" required autocomplete="postal-code" inputmode="numeric" pattern="[0-9A-Za-z \-]{4,10}" title="Bitte geben Sie eine gültige Postleitzahl ein." placeholder="z. B. 85386">
-            </div>
-            <div class="form-group">
-              <label for="ort">Ort *</label>
-              <input type="text" id="ort" name="ort" required autocomplete="address-level2" placeholder="Ihr Wohnort">
-            </div>
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Vor- und Nachname">
           </div>
 
           <div class="form-group">
@@ -511,17 +491,17 @@
           <fieldset class="form-group form-choice">
             <legend>Wie möchten Sie teilnehmen? *</legend>
             <label class="choice-card">
-              <input type="radio" name="teilnahme" value="eigene-aufstellung" required>
-              <span class="choice-card__body">
-                <span class="choice-card__title">Ich möchte selbst aufstellen</span>
-                <span class="choice-card__desc">Eigene Aufstellung inkl. Vor- und Nachgespräch — 250 &euro;</span>
-              </span>
-            </label>
-            <label class="choice-card">
-              <input type="radio" name="teilnahme" value="stellvertreter">
+              <input type="radio" name="teilnahme" value="stellvertreter" required>
               <span class="choice-card__body">
                 <span class="choice-card__title">Ich nehme als Stellvertreter:in teil</span>
                 <span class="choice-card__desc">Ohne eigene Aufstellung, miterleben und mitwirken — 50 &euro;</span>
+              </span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="teilnahme" value="eigene-aufstellung">
+              <span class="choice-card__body">
+                <span class="choice-card__title">Ich möchte selbst aufstellen</span>
+                <span class="choice-card__desc">Eigene Aufstellung inkl. Vor- und Nachgespräch — 250 &euro;</span>
               </span>
             </label>
             <label class="choice-card">
